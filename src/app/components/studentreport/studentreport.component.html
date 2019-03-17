@@ -1,0 +1,77 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="table-wrapper">
+        <table width="100%" border="1" cellspacing="0" cellpadding="0">
+          <thead>
+            <th>university</th>
+            <th>campus</th>
+            <th>degree_program</th>
+            <th>admission_session</th>
+            <th>Student Name</th>
+            <th>Father Name</th>
+            <th>Gender</th>
+            <th>Roll No</th>
+            <th>Admission Date</th>
+            <th>Nationality</th>
+            <th>CNIC Number</th>
+            <th>Date of Birth</th>
+            <th>Mailing Address</th>
+            <th>City (Mailing Address)</th>
+            <th>HSSC Total Marks</th>
+            <th>HSSC Obtained Marks</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let bla of fools">
+              <td>
+                {{bla.university}}
+              </td>
+              <td>
+                 {{bla.campus}} 
+              </td>
+              <td>
+                {{bla.degree_program}} 
+              </td>
+              <td>
+                 {{bla.admission_session}}
+              <td>
+                {{bla.student_name}} 
+              </td>
+              <td>
+               {{bla.father_name}} 
+              </td>
+              <td>
+                 {{bla.gender}} 
+              </td>
+              <td>
+                 {{bla.roll_no}}
+              <td>
+                 {{bla.admission_date}} 
+              </td>
+              <td>
+                 {{bla.nationality}} 
+              <td>
+                 {{bla.cnic}} 
+              </td>
+              <td>
+                {{bla.date_of_birth}} 
+              </td>
+              <td>
+                 {{bla.mailing_address}}
+              </td>
+              <td>
+                {{bla.city_mail_address}} 
+              </td>
+              <td>
+                {{bla.hssc_obtained_marks}} 
+              <td>
+                {{bla.hssc_total_marks}}
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
