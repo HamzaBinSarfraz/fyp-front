@@ -13,7 +13,17 @@
           <input type="password" class="form-control" name="password" class="form-control" [(ngModel)]="loginObj.password"
             #password="ngModel" required />
         </div>
-
+        <div class="form-group">
+          <div class="radio">
+            <label><input type="radio" name="optradio" value="student" (click)='userType($event)' checked>Student</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio" value="administrator" (click)='userType($event)' >Administrator</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio" value="faculty" (click)='userType($event)' >Faculty</label>
+          </div>
+        </div>
         <button type="submit" class="btn btn-success"> Login</button>
         <button class="btn btn-primary" routerLink="/signup">Sign Up</button>
       </form>

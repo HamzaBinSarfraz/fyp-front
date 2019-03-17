@@ -48,6 +48,7 @@ import { InstitutionFacultyInfoComponent } from './components/institution-facult
 import { StudentInfoComponent } from './components/student-info/student-info.component';
 import { AdmissionComponent } from './components/admission/admission.component';
 import { CurriculumRelatedInformationComponent } from './components/curriculum-related-information/curriculum-related-information.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 export function tokenGetter() {
@@ -92,7 +93,8 @@ export function tokenGetter() {
     InstitutionFacultyInfoComponent,
     StudentInfoComponent,
     AdmissionComponent,
-    CurriculumRelatedInformationComponent
+    CurriculumRelatedInformationComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

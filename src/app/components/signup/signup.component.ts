@@ -10,26 +10,25 @@ import { Router, RouterLink } from '@angular/router';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
+  signUpObj: any = {};
   public register:logup;
   public usertoken:any;
   constructor(private signupservice:users,private route:Router) { }
-public signup=new FormGroup({
-  Id: new FormControl(0),
-  name:new FormControl(null, Validators.required),
-  email:new FormControl(null,Validators.required),
-  password:new FormControl(null,Validators.required),
-})
-  ngOnInit() {
-  }
 
+    ngOnInit() {
+      this.signUpObj.role = 'student'
+  }
+  userType(event){
+    console.log(event.target.value)
+    this.signUpObj.role = event.target.value;
+  }
   save(event)
   {
-    this.register=this.signup.value;
-    console.log(this.register);
-    this.signupservice.post(environment.signup,this.register).subscribe(data=>{
+    console.log(this.signUpObj);
+    this.signupservice.post(environment.signup,this.signUpObj).subscribe(data=>{
       if(data.status===true)
       {
-        
+        console.log(data);
         console.log("save successfully");
         this.route.navigate(['/login']);
         
