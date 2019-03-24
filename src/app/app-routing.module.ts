@@ -12,7 +12,6 @@ import { GradingPolicyComponent } from './dashboard/grading-policy/grading-polic
 import { InfrastructureComponent } from './dashboard/infrastructure/infrastructure.component';
 import { ProgramMonitoringProcessComponent } from './dashboard/program-monitoring-process/program-monitoring-process.component';
 // tslint:disable-next-line:max-line-length
-// import { CurriculumRelatedInformationComponent } from './components/curriculum-related-information/curriculum-related-information.component';
 import { FacultyInformationFIFComponent } from './dashboard/faculty-information-fif/faculty-information-fif.component';
 import { PagesComponent } from './dashboard/pages/pages.component';
 import { CourseManagementComponent } from './dashboard/course-management/course-management.component';
@@ -25,6 +24,7 @@ import { AdminComponent } from './authenciation/admin/admin.component';
 import { StudentComponent } from './authenciation/student/student.component';
 import { FacultyInformtionReportComponent } from './dashboard/faculty-informtion-report/faculty-informtion-report.component';
 import { CourseReportComponent } from './dashboard/course-report/course-report.component';
+import { CurriculumRelatedInformationComponent } from './dashboard/curriculum-related-information/curriculum-related-information.component';
 const routes: Routes = [
 
   {path: '' , component: PagesComponent },
@@ -56,7 +56,7 @@ const routes: Routes = [
   {path: 'facultyInformationFIF', component: FacultyInformationFIFComponent},
   {path: 'coursemanagementreport', component: CourseReportComponent},
   {path: 'facultyInformationReport', component: FacultyInformtionReportComponent},
-  // {path: 'curriculumRelatedInformation', component: CurriculumRelatedInformationComponent},
+  {path: 'curriculumRelatedInformation', component: CurriculumRelatedInformationComponent},
   { path: 'coursemanagement', component: CourseManagementComponent },
   { path: 'coursevisit', component: CourseVisitComponent },
   { path: 'coursemonitor', component: CourseMonitorComponent },

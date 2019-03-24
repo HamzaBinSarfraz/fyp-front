@@ -35,6 +35,7 @@ import { AdminComponent } from './authenciation/admin/admin.component';
 import { StudentComponent } from './authenciation/student/student.component';
 import { FacultyInformtionReportComponent } from './dashboard/faculty-informtion-report/faculty-informtion-report.component';
 import { CourseReportComponent } from './dashboard/course-report/course-report.component';
+import { CurriculumRelatedInformationComponent } from './dashboard/curriculum-related-information/curriculum-related-information.component';
 
 
 export function tokenGetter() {
@@ -67,6 +68,7 @@ export function tokenGetter() {
     StudentComponent,
     FacultyInformtionReportComponent,
     CourseReportComponent,
+    CurriculumRelatedInformationComponent
   ],
   imports: [
     BrowserModule,
