@@ -1,0 +1,115 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="table-wrapper">
+        <table width="100%" border="1" cellspacing="0" cellpadding="0">
+          <thead>
+            <th>INSTITUTION</th>
+            <th>PROGRAM (S) TO BE EVALUATED</th>
+            <th>Full-Time Faculty Size</th>
+            <th>Number of faculty members with PhD Or Ms</th>
+            <th>Full Professors</th>
+            <th>Associate Professor</th>
+            <th>Assistant Professors</th>
+            <th>Lecturers</th>
+            <th>Teaching Assistants/Fellows</th>
+            <th>Part-Time Faculty Size</th>
+            <th>Number of faculty members with PhD Or Ms</th>
+            <th>Full Professors</th>
+            <th>Associate Professor</th>
+            <th>Assistant Professors</th>
+            <th>Lecturers</th>
+            <th>Teaching Assistants/Fellows</th>
+            <th>Year</th>
+            <th>Total Faculty</th>
+            <th>Resigned</th>
+            <th>Retired</th>
+            <th>Terminated</th>
+            <th>New Induction</th>
+            <th>Action</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let bla of fools">
+              <td>
+                {{bla.institution}}
+              </td>
+              <td>
+                {{bla.program}}
+              </td>
+              <td>
+                {{bla.facultySize}}
+              </td>
+              <td>
+                {{bla.noOfFaculty}}
+              </td>
+              <td>
+                {{bla.fullProfrssor}}
+              </td>
+              <td>
+                {{bla.associateProfessor}}
+              </td>
+              <td>
+                {{bla.assistantProfessor}}
+              </td>
+              <td>
+                {{bla.leacures}}
+              </td>
+              <td>
+                {{bla.teaching}}
+              </td>
+              <td>
+                  {{bla.facultySize1}}
+                </td>
+                <td>
+                  {{bla.noOfFaculty1}}
+                </td>
+                <td>
+                  {{bla.fullProfrssor1}}
+                </td>
+                <td>
+                  {{bla.associateProfessor1}}
+                </td>
+                <td>
+                  {{bla.assistantProfessor1}}
+                </td>
+                <td>
+                  {{bla.leacures1}}
+                </td>
+                <td>
+                  {{bla.teaching1}}
+                </td>
+                <td>2011-2012</td>
+                
+              <td>
+                {{bla.totalFaculty}}
+              </td>
+              <td>
+                {{bla.resigned}}
+              </td>
+              <td>
+                {{bla.retired}}
+              </td>
+              <td>
+                {{bla.terminated}}
+              </td>
+              <td>
+                {{bla.newInduction}}
+             
+                </td>
+                <td>
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"  data-target="#exampleModal2">
+                  <i class="fas fa-trash-alt"></i> Edit
+              </button>
+   
+            <button type="button" class="btn btn-primary btn-sm" (click)="deletefaculty(bla._id)" >
+                <i class="fas fa-trash-alt"></i> Delete
+            </button>
+          </td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

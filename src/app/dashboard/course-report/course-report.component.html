@@ -1,0 +1,360 @@
+ <div class="container-fluid"> 
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Course Display for the Visit</h2>
+      <div class="table-wrapper">
+        <table width="100%" border="1" cellspacing="0" cellpadding="0">
+          <thead>
+            <th>Vice Chancellor or Rector</th>
+            <th>Signature</th>
+            <th>Date</th>
+            <th>Action</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let bla of fools1">
+              <td>
+                {{bla.viceChancellor}}
+              </td>
+              <td>
+                {{bla.signature}}
+              </td>
+              <td>
+                {{bla.date}}
+              </td>
+              <td>
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"  data-target="#exampleModal2">
+                    <i class="fas fa-trash-alt"></i> Edit
+                </button>
+
+              <button type="button" class="btn btn-primary btn-sm" (click)="deleteCourseDisplay(bla._id)">
+                  <i class="fas fa-trash-alt"></i> Delete
+              </button>
+          </td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Course Log Template</h2>
+      <div class="table-wrapper">
+        <table width="100%" border="1" cellspacing="0" cellpadding="0">
+          <thead>
+            <th>INSTITUTION</th>
+            <th>PROGRAM (S) TO BE EVALUATED</th>
+            <th>Course Name</th>
+            <th>Catalog Number</th>
+            <th>Instructor Name</th>
+            <th>Date</th>
+            <th>Duration</th>
+            <th>Topics Covered</th>
+            <th>Evaluation Instruments used</th>
+            <th>Signature</th>
+            <th>Date</th>
+            <th>Action</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let bla of fools2">
+              <td>
+                {{bla.institution}}
+              </td>
+              <td>
+                {{bla.program}}
+              </td>
+              <td>
+                {{bla.courseCode}}
+              </td>
+              <td>
+                {{bla.catalogNumber}}
+              </td>
+              <td>
+                {{bla.instructorName}}
+              </td>
+              <td>
+                {{bla.date}}
+              </td>
+              <td>
+                {{bla.duration}}
+              </td>
+              <td>
+                {{bla.topicsCovered}}
+              </td>
+              <td>
+                {{bla.evaluationInstruments}}
+              </td>
+              <td>
+                  {{bla.siganture}}
+                </td>
+                <td>
+                  {{bla.submitDate}}
+                </td>
+                <td>
+                  <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"  data-target="#exampleModal2">
+                      <i class="fas fa-trash-alt"></i> Edit
+                  </button>
+            
+                <button type="button" class="btn btn-primary btn-sm" (click)="deleteCourseLog(bla._id)">
+                    <i class="fas fa-trash-alt"></i> Delete
+                </button>
+            </td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>COURSE MONITORING PROCESS FORM</h2>
+      <div class="table-wrapper">
+        <table width="100%" border="1" cellspacing="0" cellpadding="0">
+          <thead>
+            <th>INSTITUTION</th>
+            <th>PROGRAM (S) TO BE EVALUATED</th>
+            <th>How far objectives of the program have been achieved?</th>
+            <th>Full coverage of contents</th>
+            <th>Relevant Problems Skills Development</th>
+            <th>Assessment Standards</th>
+            <th>Application of emerging technologies</th>
+            <th>Program Coordinator:Name:</th>
+            <th>Signature</th>
+            <th>Date</th>
+            <th>Action</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let bla of fools3">
+              <td>
+                {{bla.institution}}
+              </td>
+              <td>
+                {{bla.program}}
+              </td>
+              <td>
+                {{bla.q1}}
+              </td>
+              <td>
+                {{bla.q2}}
+              </td>
+              <td>
+                {{bla.q3}}
+              </td>
+              <td>
+                {{bla.q4}}
+              </td>
+              <td>
+                {{bla.q5}}
+              </td>
+              <td>
+                {{bla.programCoordinatorName}}
+              </td>
+              <td>
+                {{bla.siganture}}
+              </td>
+              <td>
+                  {{bla.submitDate}}
+                </td>
+                <td>
+                  <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"  data-target="#exampleModal2">
+                      <i class="fas fa-trash-alt"></i> Edit
+                  </button>
+         
+                <button type="button" class="btn btn-primary btn-sm" (click)="deleteCOURSEMONITORING(bla._id)" >
+                    <i class="fas fa-trash-alt"></i> Delete
+                </button>
+            </td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>COURSE REGISTRATION POLICIES AND PROCEDURES</h2>
+      <div class="table-wrapper">
+        <table width="100%" border="1" cellspacing="0" cellpadding="0">
+          <thead>
+            <th>INSTITUTION</th>
+            <th>PROGRAM (S) TO BE EVALUATED</th>
+            <th>Full-Time Faculty Size</th>
+            <th>When is pre-registration done?</th>
+            <th>How is pre-registration done?</th>
+            <th>When is late registration allowed?</th>
+            <th>What is the penalty for late registration?</th>
+            <th>When is it allowed? How is it ensured that students are not allowed to add or drop a course after the add/drop deadline has passed?</th>
+            <th>What is the policy for withdrawal from a course? What is the penalty for withdrawal? How is this policy implemented?</th>
+            <th>What is policy regarding drop/withdrawal of semester?</th>
+            <th>E.Policy regarding minimum and maximum credit hours to be registered?</th>
+            <th>F:Process to ensure that the above Policies and Procedures are implemented?</th>
+            <th>Dean Signature</th>
+            <th>Date</th>
+            <th>Action</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let bla of fools4">
+              <td>
+                {{bla.institution}}
+              </td>
+              <td>
+                {{bla.program}}
+              </td>
+              <td>
+                {{bla.facultySize}}
+              </td>
+              <td>
+                {{bla.preRegPolicyWhen}}
+              </td>
+              <td>
+                {{bla.preRegPolicyHow}}
+              </td>
+              <td>
+                {{bla.lateRegPolicy1}}
+              </td>
+              <td>
+                {{bla.lateRegPolicy2}}
+              </td>
+              <td>
+                {{bla.leacures}}
+              </td>
+              <td>
+                {{bla.minAndMaxCreditHours}}
+              </td>
+              <td>
+                  {{bla.facultySize1}}
+                </td>
+                <td>
+                  {{bla.noOfFaculty1}}
+                </td>
+                <td>
+                  {{bla.processToEnsure}}
+                </td>
+                <td>
+                  {{bla.deanSiganture}}
+                </td>
+              <td>{{bla.submitDate}}</td>
+              <td>
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"  data-target="#exampleModal2">
+                    <i class="fas fa-trash-alt"></i> Edit
+                </button>
+      
+              <button type="button" class="btn btn-primary btn-sm"  (click)="deleteCOURSEREGISTRATION(bla._id)">
+                  <i class="fas fa-trash-alt"></i> Delete
+              </button>
+          </td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>COURSE DESCRIPTION FORM</h2>
+      <div class="table-wrapper">
+        <table width="100%" border="1" cellspacing="0" cellpadding="0">
+          <thead>
+            <th>INSTITUTION</th>
+            <th>PROGRAM (S) TO BE EVALUATED</th>
+            <th>Course Code</th>
+            <th>Course Title</th>
+            <th>Prerequisites by Course(s) and Topics	</th>
+            <th>Assessment Instruments with Weights (homework, quizzes, midterms, final, programming assignments, lab work, etc.)</th>
+            <th>Course Coordinator</th>
+            <th>URL(if any)</th>
+            <th>Current Catalog Description</th>
+            <th>Textbook (or Laboratory Manual for Laboratory Courses)</th>
+            <th>Reference Material</th>
+            <th>Course Goals</th>
+            <th>Topics Covered in the Course, with Number of Lectures on Each Topic (assume 15-week instruction and one-hour lectures)</th>
+            <th>Laboratory Projects/Experiments Done in the Course</th>
+            <th>Programming Assignments Done in the Course</th>
+            <th>Instructor Name</th>
+            <th>Instructor Signature</th>
+            <th>Date</th>
+            <th>Action</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let bla of fools5">
+              <td>
+                {{bla.institution}}
+              </td>
+              <td>
+                {{bla.program}}
+              </td>
+              <td>
+                {{bla.courseCode}}
+              </td>
+              <td>
+                {{bla.courseTitle}}
+              </td>
+              <td>
+                {{bla.assessment}}
+              </td>
+              <td>
+                {{bla.assessment}}
+              </td>
+              <td>
+                {{bla.courseCoordinator}}
+              </td>
+              <td>
+                {{bla.url}}
+              </td>
+              <td>
+                {{bla.currentCatalog}}
+              </td>
+              <td>
+                  {{bla.courseGoals}}
+                </td>
+                <td>
+                  {{bla.referenceMaterial}}
+                </td>
+                <td>
+                  {{bla.courseGoals}}
+                </td>
+                <td>
+                  {{bla.topics}}
+                </td>
+                <td>
+                  {{bla.laboratory}}
+                </td>
+                <td>
+                  {{bla.programmingAssignment}}
+                </td>
+                <td>
+                  {{bla.instructorName}}
+                </td>
+                <td>{{bla.instructorSig}}</td>
+                
+              <td>
+                {{bla.date}}
+              </td>
+              <td>
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"  data-target="#exampleModal2">
+                    <i class="fas fa-trash-alt"></i> Edit
+                </button>
+     
+              <button type="button" class="btn btn-primary btn-sm" (click)="deleteCOURSEDESCRIPTION(bla._id)" >
+                  <i class="fas fa-trash-alt"></i> Delete
+              </button>
+          </td>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div> 
+
