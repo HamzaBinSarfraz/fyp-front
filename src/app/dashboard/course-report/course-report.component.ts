@@ -63,6 +63,7 @@ export class CourseReportComponent implements OnInit {
     this.getAllcousrseService.get(environment.Coursereg).subscribe(data => {
       this.fools4 = data.data;
       console.log(this.fools4);
+     
 
     });
   }
@@ -81,7 +82,7 @@ export class CourseReportComponent implements OnInit {
     console.log(id);
     this.getAllcousrseService.delete(environment.Coursedis, id).subscribe(data => {
       alert('Delete Successfully');
-      
+      this.CourseDisplayfortheVisit();
     });
   }
 
@@ -89,12 +90,14 @@ export class CourseReportComponent implements OnInit {
     console.log(id);
     this.getAllcousrseService.delete(environment.Courselog, id).subscribe(data => {
       alert('Delete Successfully');
+      this.courseLogTemplate();
     });
   }
   deleteCOURSEMONITORING(id) {
     console.log(id);
     this.getAllcousrseService.delete(environment.Coursemon, id).subscribe(data => {
       alert('Delete Successfully');
+      this.CourseMonitoringProcess();
     });
   }
 
@@ -103,13 +106,14 @@ export class CourseReportComponent implements OnInit {
 
     this.getAllcousrseService.delete(environment.Coursereg, id).subscribe(data => {
       alert('Delete Successfully');
+      this.CourseRegistration();
     });
   }
   deleteCOURSEDESCRIPTION(id) {
     console.log(id);
     this.getAllcousrseService.delete(environment.Coursediscription, id).subscribe(data => {
       alert('Delete Successfully');
-
+      this.CourseDescription();
     });
   }
 }

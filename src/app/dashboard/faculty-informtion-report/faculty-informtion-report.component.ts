@@ -29,6 +29,7 @@ export class FacultyInformtionReportComponent implements OnInit {
   deletefaculty(id) {
     this.getAllStudent.delete(environment.Faculty, id).subscribe(data => {
       alert('Delete Successfully');
+      this.load();
   }
     );
 

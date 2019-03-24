@@ -66,6 +66,7 @@ export class StudentreportComponent implements OnInit {
   deletestudent(id) {
     this.getAllStudent.delete(environment.studinfo, id).subscribe(data => {
       alert('Delete Successfully');
+      this.load();
   });
 }
 }
