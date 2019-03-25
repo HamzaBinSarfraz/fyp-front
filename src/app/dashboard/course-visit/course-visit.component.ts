@@ -13,6 +13,7 @@ export class CourseVisitComponent implements OnInit {
   constructor(private couserService: users) { }
   public addCoursevisit = new FormGroup({
     'viceChancellor': new FormControl(null, Validators.required),
+	// tslint:disable-next-line:indent
 	'signature': new FormControl(null, Validators.required),
 	'date': new FormControl(null, Validators.required),
   });
