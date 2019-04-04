@@ -1,0 +1,24 @@
+<div style="margin-top:70px;">
+  <h3 style="text-align:center;">Profile</h3>
+
+
+  <div>
+
+
+    <h2 style="text-align:center;">Login</h2>
+    <form [formGroup]="profile">
+
+      <input type="password" class="form-control" placeholder="Current Password">
+      <br>
+
+
+      <input class="form-control" type="password" placeholder="New Password" formControlName="password">
+      <br>
+
+      <input class="form-control" type="password" placeholder="Confirm Password">
+    </form>
+    <br>
+    <button class="btn btn-success" style="margin-left:45%;" type="submit" (click)="Update($event)" >Update Password</button>
+  </div>
+
+</div>

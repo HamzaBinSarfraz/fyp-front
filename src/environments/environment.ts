@@ -13,6 +13,8 @@ export const environment = {
   Coursedis: `${baseUrl}coursedisplay`,
   Coursediscription: `${baseUrl}coursediscription`,
   Faculty: `${baseUrl}faculty`,
+  Curriculum: `${baseUrl}curriculum`,
+
 };
 
 /*

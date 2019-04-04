@@ -28,16 +28,10 @@ export class AuthComponent implements OnInit {
       this.jwt.decodeToken();
       this.roles = data.data.role;
       localStorage.setItem('datarole', this.roles);
+      localStorage.setItem('userid', data.data._id);
       localStorage.setItem('token', this.usertoken);
       if (data.status === true) {
-      if (data.data.role === 2) {
-        console.log('save successfully');
-        this.route.navigate(['dashboard/facultyInformationFIF']);
-      } else if (data.data.role === 1) {
-        this.route.navigate(['dashboard/studentinfoadmin']);
-      } else if (data.data.role === 0) {
-        this.route.navigate(['dashboard/studentinfoadmin']);
-      }
+        this.route.navigate(['dashboard/view']);
     }
     });
   }

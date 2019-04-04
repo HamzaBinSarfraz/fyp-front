@@ -11,7 +11,13 @@
           <label>Campus</label> <input type="text" formControlName="campus" class="form-control" />
         </div>
         <div class="form-group">
-          <label>Degree Progam</label> <input type="text" formControlName="degree_program" class="form-control" />
+          <label>Degree Progam</label>
+          <select class="form-control" formControlName="degree_program">
+            <option [ngValue]='undefined' selected disabled>Select</option>
+            <option>BSCS</option>
+            <option>MSCS</option>
+            <option>MCS</option>
+          </select>
         </div>
         <div class="form-group">
           <label>Admission Session</label> <input type="text" formControlName="admission_session" class="form-control" />
@@ -30,7 +36,6 @@
             <th >Date of Birth</th>
             <th >Mailing Address</th>
             <th >City (Mailing Address)</th>
-            <th >HSSC Degree Name</th>
             <th >HSSC Total Marks</th>
             <th >HSSC Obtained Marks</th>
           </thead>
@@ -42,13 +47,12 @@
               <td><input type="text" formControlName="roll_no"/></td>
               <td><input type="date" formControlName="admission_date" /></td>
               <td><input type="text" formControlName="nationality"/></td>
-              <td><input type="text" formControlName="cnic"/></td>
+              <td><input type="number" formControlName="cnic"/></td>
               <td><input type="date" formControlName="date_of_birth"/></td>
               <td><input type="text" formControlName="mailing_address"/></td>
               <td><input type="text" formControlName="city_mail_address"/></td>
-              <td><input type="text" formControlName="hssc_degree_name"/></td>
-              <td><input type="text" formControlName="hssc_total_marks"/></td>
-              <td><input type="text" formControlName="hssc_obtained_marks"/></td>
+              <td><input type="number" formControlName="hssc_total_marks"/></td>
+              <td><input type="number" formControlName="hssc_obtained_marks"/></td>
             </tr>
 
           </tbody>

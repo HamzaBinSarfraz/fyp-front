@@ -25,6 +25,12 @@ import { StudentComponent } from './authenciation/student/student.component';
 import { FacultyInformtionReportComponent } from './dashboard/faculty-informtion-report/faculty-informtion-report.component';
 import { CourseReportComponent } from './dashboard/course-report/course-report.component';
 import { CurriculumRelatedInformationComponent } from './dashboard/curriculum-related-information/curriculum-related-information.component';
+// tslint:disable-next-line:max-line-length
+import { CurriculumRelatedInformationReportComponent } from './dashboard/curriculum-related-information-report/curriculum-related-information-report.component';
+import { ViewComponent } from './dashboard/view/view.component';
+import { StudentformComponent } from './dashboard/studentform/studentform.component';
+import { FacultyformComponent } from './dashboard/facultyform/facultyform.component';
+import { ProfileComponent } from './dashboard/profile/profile.component';
 const routes: Routes = [
 
   {path: '' , component: PagesComponent },
@@ -39,24 +45,29 @@ const routes: Routes = [
 
   {path: 'studentinfoadmin', component: StudentinfoadminComponent },
 
+  {path: 'view' , component: ViewComponent },
+
   {path: 'studentreport', component: StudentreportComponent },
 
   { path: 'financial', component: FinancialComponent},
 
   { path: 'fieldAuditguidelinesDR', component: FieldAuditGuidelinesDRComponent},
 
+  { path: 'studentform', component: StudentformComponent},
+  { path: 'facultyform', component: FacultyformComponent},
   { path: 'fieldAuditschedule' ,  component: FieldAuditScheduleComponent},
 
   {path: 'gradingpolicy', component: GradingPolicyComponent},
 
   {path: 'infrastructure', component: InfrastructureComponent},
-
+  {path: 'profile', component: ProfileComponent},
   {path: 'programMonitoringProcess', component: ProgramMonitoringProcessComponent},
 
   {path: 'facultyInformationFIF', component: FacultyInformationFIFComponent},
   {path: 'coursemanagementreport', component: CourseReportComponent},
   {path: 'facultyInformationReport', component: FacultyInformtionReportComponent},
   {path: 'curriculumRelatedInformation', component: CurriculumRelatedInformationComponent},
+  {path: 'curriculumRelatedInformationreport', component: CurriculumRelatedInformationReportComponent},
   { path: 'coursemanagement', component: CourseManagementComponent },
   { path: 'coursevisit', component: CourseVisitComponent },
   { path: 'coursemonitor', component: CourseMonitorComponent },
@@ -67,7 +78,7 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,194 +1,130 @@
-<nav
-class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top"
->
-<div class="container-fluid">
-  <a class="navbar-brand" href="index.html">Federal Urdu University</a>
-  <button
-    class="navbar-toggler navbar-toggler-right"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarResponsive"
-    aria-controls="navbarResponsive"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav ml-auto">
-      <li  *ngIf="currentUser==='0'" class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdownPortfolio"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Administration Management
-        </a>
-        <div
-          class="dropdown-menu dropdown-menu-right"
-          aria-labelledby="navbarDropdownPortfolio"
-        >
-          <a class="dropdown-item" routerLink="/dashboard/financial">Financial</a>
-          <a class="dropdown-item" routerLink="/dashboard/fieldAuditschedule"
-            >Field Audit Schedule
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Federal Urdu University</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li *ngIf="currentUser==='0'" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Administration Management
           </a>
-          <a class="dropdown-item" routerLink="/dashboard/fieldAuditguidelinesDR"
-            >Field Audit Guidelines-DR
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+            <a class="dropdown-item" routerLink="/dashboard/financial">Financial</a>
+            <a class="dropdown-item" routerLink="/dashboard/fieldAuditschedule">Field Audit Schedule
+            </a>
+            <a class="dropdown-item" routerLink="/dashboard/fieldAuditguidelinesDR">Field Audit Guidelines-DR
+            </a>
+            <a class="dropdown-item" routerLink="/dashboard/gradingpolicy">GradingPolicy
+            </a>
+            <a class="dropdown-item" routerLink="/dashboard/infrastructure">Infrastructure
+            </a>
+            <a class="dropdown-item" routerLink="/dashboard/programMonitoringProcess">ProgramMonitoringProcess(PMPF)
+            </a>
+          </div>
+        </li>
+        <li *ngIf="currentUser ==='1'" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Student Management
           </a>
-          <a class="dropdown-item" routerLink="/dashboard/gradingpolicy"
-            >GradingPolicy
-          </a>
-          <a class="dropdown-item" routerLink="/dashboard/infrastructure"
-            >Infrastructure
-          </a>
-          <a
-            class="dropdown-item"
-            routerLink="/dashboard/programMonitoringProcess"
-            >ProgramMonitoringProcess(PMPF)
-          </a>
-        </div>
-      </li>
-      <li  *ngIf="currentUser ==='1' || currentUser==='0'" class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdownBlog"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Student Management
-        </a>
-        <div
-          class="dropdown-menu dropdown-menu-right"
-          aria-labelledby="navbarDropdownBlog"
-        >
-          <a
-          routerLink="/dashboard/studentinfoadmin"
-            class="dropdown-item"
-            href="./institution_faculty_information.html"
-            >Institution-Students Information
-          </a>
-          <!-- <a
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+            <a routerLink="/dashboard/studentinfoadmin" class="dropdown-item"
+              href="./institution_faculty_information.html">Institution-Students Information
+            </a>
+            <!-- <a
             class="dropdown-item"
             href="./institution_students_information.html"
             >StudentInformation
           </a> -->
-          <a
-          class="dropdown-item"
-          routerLink = "/dashboard/studentreport"
-          >Student Reports
-        </a>
-        </div>
-      </li>
-      <li  *ngIf="currentUser==='2' || currentUser==='0'" class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdownBlog"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Faculty Management
-        </a>
-        <div
-          class="dropdown-menu dropdown-menu-right"
-          aria-labelledby="navbarDropdownBlog"
-        >
-          <a class="dropdown-item" routerLink="/dashboard/facultyInformationFIF"
-            >Faculty Information FIF</a
-          >
-          <a
-            class="dropdown-item"
-            routerLink="/dashboard/facultyInformationReport"
-            >Faculty Information FIF Report
+          <a class="dropdown-item" routerLink="/dashboard/studentform">Student info
           </a>
-        </div>
-      </li>
-      <li   *ngIf="currentUser==='0'" class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdownBlog"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Course Management
-        </a>
-        <div
-          class="dropdown-menu dropdown-menu-right"
-          aria-labelledby="navbarDropdownBlog"
-        >
-          <a
-            class="dropdown-item"
-            routerLink='/dashboard/coursevisit'
-            >Course Display for the Visit
-          </a>
+            <a class="dropdown-item" routerLink="/dashboard/studentreport">Student Reports
+            </a>
+          </div>
+        </li>
 
-          <a class="dropdown-item" routerLink="/dashboard/courselog"
-            >CourseLog Template (CLT)
+        <li *ngIf="currentUser==='2'" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Faculty Management
           </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+            <a class="dropdown-item" routerLink="/dashboard/facultyInformationFIF">Faculty Information FIF</a>
+            <a class="dropdown-item" routerLink="/dashboard/facultyform">Institution Faculty Info</a>
+  
+          </div>
+        </li>
+        <li *ngIf="currentUser==='0' || currentUser==='2'" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Course Management
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+            <a class="dropdown-item" routerLink='/dashboard/coursevisit'>Course Display for the Visit
+            </a>
 
-          <a class="dropdown-item" routerLink='/dashboard/coursemonitor'
-            >Course Monitoring Process (CMPF)
-          </a>
+            <a class="dropdown-item" routerLink="/dashboard/courselog">CourseLog Template (CLT)
+            </a>
 
-          <a
-            class="dropdown-item"
-            routerLink='/dashboard/courseregistration'
-            >Course Registration
-          </a>
+            <a class="dropdown-item" routerLink='/dashboard/coursemonitor'>Course Monitoring Process (CMPF)
+            </a>
 
-          <a class="dropdown-item" routerLink='/dashboard/coursemanagement'
-            >Course Description
-          </a>
-          <a class="dropdown-item" routerLink='/dashboard/coursemanagementreport'
+            <a class="dropdown-item" routerLink='/dashboard/courseregistration'>Course Registration
+            </a>
+
+            <a class="dropdown-item" routerLink='/dashboard/coursemanagement'>Course Description
+            </a>
+            <!-- <a class="dropdown-item" routerLink='/dashboard/coursemanagementreport'
             >Course Management Reports
+          </a> -->
+          </div>
+        </li>
+
+        <li *ngIf="currentUser==='0'" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Curriculum Management
           </a>
-        </div>
-      </li>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+            <a class="dropdown-item" routerLink="/dashboard/curriculumRelatedInformation">CurriculumRelatedInformation
+            </a>
 
-      <li  *ngIf="currentUser==='0'" class="nav-item dropdown">
-        <a
-          class="nav-link dropdown-toggle"
-          href="#"
-          id="navbarDropdownBlog"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          Curriculum Management
-        </a>
-        <div
-          class="dropdown-menu dropdown-menu-right"
-          aria-labelledby="navbarDropdownBlog"
-        >
-          <a
-            class="dropdown-item"
-            routerLink="/dashboard/curriculumRelatedInformation"
-            >CurriculumRelatedInformation
+            <a class="dropdown-item"
+              routerLink="/dashboard/curriculumRelatedInformationreport">CurriculumRelatedInformation Report
+            </a>
+          </div>
+        </li>
+
+        <li *ngIf="currentUser==='0' || currentUser==='2'" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Reports
           </a>
-
-          <a
-          class="dropdown-item"
-          routerLink="/dashboard/curriculumRelatedInformationreport"
-          >CurriculumRelatedInformation Report
-        </a>
-        </div>
-      </li>
-
-      <!--  <li class="nav-item">
-        <a class="nav-link" routerLink="/login">Login</a>
-      </li> -->
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/login">Logout</a>
-      </li> 
-    </ul>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+            <a class="dropdown-item" routerLink="/dashboard/studentreport">Student Reports
+            </a>
+            <a class="dropdown-item" routerLink="/dashboard/facultyInformationReport">Faculty Information FIF Report
+            </a>
+            <a class="dropdown-item" routerLink='/dashboard/coursemanagementreport'>Course Management Reports
+            </a>
+            <a class="dropdown-item"
+              routerLink="/dashboard/curriculumRelatedInformationreport">CurriculumRelatedInformation Report
+            </a>
+          </div>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link"  [routerLink]="['/dashboard/profile']" routerLinkActive="router-link-active"  >Update Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  (click)="logout($event)" >Logout</a>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 </nav>

@@ -41,10 +41,10 @@ export class StudentinfoadminComponent implements OnInit {
      this.AddStudentData.value.token = this.usertoken;
     this.studentservice.post(environment.studinfo, this.AddStudentData.value).subscribe(data => {
 
-      if (data.success === true) {
+      if (data.status === true) {
 
         console.log('save successfully');
-
+        this.AddStudentData.reset();
       }
 
     });

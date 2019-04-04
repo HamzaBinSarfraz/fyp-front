@@ -36,8 +36,14 @@ import { StudentComponent } from './authenciation/student/student.component';
 import { FacultyInformtionReportComponent } from './dashboard/faculty-informtion-report/faculty-informtion-report.component';
 import { CourseReportComponent } from './dashboard/course-report/course-report.component';
 import { CurriculumRelatedInformationComponent } from './dashboard/curriculum-related-information/curriculum-related-information.component';
+// tslint:disable-next-line:max-line-length
+import { CurriculumRelatedInformationReportComponent } from './dashboard/curriculum-related-information-report/curriculum-related-information-report.component';
 
-
+import { DataTablesModule } from 'angular-datatables';
+import { ViewComponent } from './dashboard/view/view.component';
+import { StudentformComponent } from './dashboard/studentform/studentform.component';
+import { FacultyformComponent } from './dashboard/facultyform/facultyform.component';
+import { ProfileComponent } from './dashboard/profile/profile.component';
 export function tokenGetter() {
   return localStorage.getItem('access_token');
 }
@@ -68,12 +74,17 @@ export function tokenGetter() {
     StudentComponent,
     FacultyInformtionReportComponent,
     CourseReportComponent,
-    CurriculumRelatedInformationComponent
+    CurriculumRelatedInformationComponent,
+    CurriculumRelatedInformationReportComponent,
+    ViewComponent,
+    StudentformComponent,
+    FacultyformComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, HttpClientModule, HttpModule, ReactiveFormsModule,
+    FormsModule, HttpClientModule, HttpModule, DataTablesModule, ReactiveFormsModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter

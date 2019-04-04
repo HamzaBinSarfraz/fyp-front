@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="table-wrapper">
-        <table width="100%" border="1" cellspacing="0" cellpadding="0">
+        <table>
           <thead>
             <th>university</th>
             <th>campus</th>
@@ -73,7 +73,7 @@
                 {{bla.hssc_total_marks}}
               </td>
               <td>
-                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"  data-target="#exampleModal2">
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"  (click)="update_student(bla._id)" data-target="#detialsModel">
                   <i class="fas fa-trash-alt"></i> Edit
               </button>
    
@@ -87,5 +87,92 @@
         </table>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="modal fade" id="detialsModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content" id="modelwidth1">
+         
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Edit Student Form</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h2>INFORMATION ABOUT ADMITTED STUDENTS</h2>
+                      <form [formGroup]="reportform">
+                        <div class="form-group">
+                          <label>University/Institution</label>
+                          <input type="text" formControlName="university" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                          <label>Campus</label> <input type="text" formControlName="campus" class="form-control" />
+                        </div>
+                  
+                        <div class="form-group">
+                          <label>Degree Progam</label>
+                          <select class="form-control" formControlName="degree_program">
+                            <option [ngValue]='undefined' selected disabled>Select</option>
+                            <option>BSCS</option>
+                            <option>MSCS</option>
+                            <option>MCS</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label>Admission Session</label> <input type="text" formControlName="admission_session" class="form-control" />
+                        </div>
+                      
+                      <div class="table-wrapper">
+                        <table class="table table-striped table-bordered">
+                          <thead>
+                            <th >Student Name</th>
+                            <th >Father Name</th>
+                            <th >Gender</th>
+                            <th >Roll No</th>
+                            <th >Admission Date</th>
+                            <th >Nationality</th>
+                            <th >CNIC Number</th>
+                            <th >Date of Birth</th>
+                            <th >Mailing Address</th>
+                            <th >City (Mailing Address)</th>
+                            <th >HSSC Total Marks</th>
+                            <th >HSSC Obtained Marks</th>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><input type="text" formControlName="student_name" /></td>
+                              <td><input type="text" formControlName="father_name"/></td>
+                              <td><input type="text" formControlName="gender" /></td>
+                              <td><input type="text" formControlName="roll_no"/></td>
+                              <td><input type="date" formControlName="admission_date" /></td>
+                              <td><input type="text" formControlName="nationality"/></td>
+                              <td><input type="number" formControlName="cnic"/></td>
+                              <td><input type="date" formControlName="date_of_birth"/></td>
+                              <td><input type="text" formControlName="mailing_address"/></td>
+                              <td><input type="text" formControlName="city_mail_address"/></td>
+                              <td><input type="number" formControlName="hssc_total_marks"/></td>
+                              <td><input type="number" formControlName="hssc_obtained_marks"/></td>
+                            </tr>
+                
+                          </tbody>
+                        </table>
+                      </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="formbtn btn btn-success" data-dismiss="modal" (click)="editstudent(reportform.value._id)">Save</button>
+                  <button type="button" class="formbtn btn btn-danger" data-dismiss="modal">Cancel</button>
+              </div>
+          
+      </div>
   </div>
 </div>
